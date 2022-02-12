@@ -19,168 +19,271 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Museo Sans 700 Bold';
+  src: url("../fonts/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/MuseoSansCyrl-700.woff") format("woff"),
+  url("../fonts/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Global */
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *:focus:not(:focus-visible) {
-	outline: none;
+  outline: none;
 }
 
 /* Сustom properties  */
 
 :root {
-	--basic-white: #ffffff;
-	--background-footer: #030102;
+  --basic-white: #ffffff;
+  --background-footer: #030102;
+  --button-buy-tickets: #151515;
 }
 
 /* Index */
 .page,
 .page-body {
-	font-size: 62.5%; /* стандартный шрифт в браузере 16px, мы делаем его 10px, чтобы 1 rem = 10px */
+  font-size: 62.5%; /* стандартный шрифт в браузере 16px, мы делаем его 10px, чтобы 1 rem = 10px */
 }
 
 .page {
-	height: 100%;
+  height: 100%;
 }
 
 .page-body {
-	min-width: 1240px;
-	min-height: 100%;
-  	margin: 0;
- 	padding: 0;
- 	background: url(../img/background-img.jpg) no-repeat;
- 	background-size: 100%;
- 	font-size: 14px;
-  	font-weight: 400;
-  	line-height: 16px;
-  	display: grid;
-  	grid-template-rows: min-content 1fr min-content;
-  	align-content: start;
+  min-width: 124rem;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 114%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  color: var(--basic-white);
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
 
 .main-header {
-	padding-top: 6.4rem;
-	padding-bottom: 9.4rem;
+  position: absolute;
+  padding-bottom: 9.5rem;
+  left: 50%;
+  top: 6.4rem;
+  transform: translate(-50%, 0);
+
 }
 
 .container {
-	width: 113.5rem; /*rem = 10px*/
-	margin: 0 auto;
+  width: 113.5rem; /*rem = 10px*/
+  margin: 0 auto;
 }
 
 .main-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .wrapper-nav {
-	display: flex;
-	width: 100%;
-	align-items: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 
 .header-logo {
-	width: 7.9rem;
-	height: 2.8rem;
-	margin-right: 3.9rem;
+  width: 7.9rem;
+  height: 2.8rem;
+  margin-right: 3.9rem;
 }
 
 .site-nav,
 .list-social {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .site-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0;
-	margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .site-nav li:not(:last-child) {
-	margin-right: 2.4rem;
+  margin-right: 2.4rem;
 }
 
 .site-nav a {
-	color: var(--basic-white);
+  color: var(--basic-white);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 114%;
 }
 
 .list-social {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0;
-	margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .list-social li:not(:last-child) {
-	margin-right: 2rem;
+  margin-right: 2rem;
 }
 
 .social-icon {
-	width: 1.7rem;
-	height: 1.7rem;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+/* Main */
+
+.main {
+  padding-top: 18.7rem;
+  background: url(../img/background-img.jpg) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+}
+
+/* Section - about-film */
+
+.title-film {
+  margin-bottom: 1.6rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 114%;
+}
+
+.rating-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rating-film {
+  display: flex;
+  align-items: center;
+  margin-right: 0.9rem;
+  cursor: pointer;
+}
+
+.rating-star {
+  width: 1.2rem;
+  height: 1.15rem;
+  flex-shrink: 0; /* Ставим, чтобы при уменьшении экрана, img не сжалось */
+}
+
+.rating-star:not(:last-child) {
+  margin-right: 0.4rem;
+}
+
+.estimation {
+  font-size: 1.2rem;
+  line-height: 117%;
+}
+
+.header-film {
+  font-family: 'Museo Sans 700 Bold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 7.6rem;
+  line-height: 120%;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.desc-film {
+  max-width: 52.8rem;
+  margin-bottom: 4.1rem;
+}
+
+.desc-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 150%;
+}
+
+.button-buy-tickets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 24.5rem;
+  color: var(--basic-white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 114%;
+  padding: 2.2rem 7.2rem;
+  background-color: var(--button-buy-tickets);
+  border-radius: 0.8rem;
+  margin-bottom: 8.8rem;
 }
 
 /* Footer */
 
 .main-footer {
-	background-color: var(--background-footer);
-	padding: 2rem 0;
-	flex: 0 0 auto;
+  background-color: var(--background-footer);
+  padding: 2rem 0;
+  flex: 0 0 auto;
 }
 
 .main-footer .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright-text {
-	color: var(--basic-white);
-	opacity: 0.4;
-	font-size: 14px;
-  	font-weight: 400;
-  	line-height: 20px;
-  	margin: 0;
+  color: var(--basic-white);
+  opacity: 0.4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
 }
 
 .list-copyright {
-	list-style: none;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .list-copyright li:not(:last-child) {
-	margin-right: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .list-copyright a {
-	color: var(--basic-white);
-	opacity: 0.4;
-	font-size: 14px;
-  	font-weight: 400;
-  	line-height: 20px;
+  color: var(--basic-white);
+  opacity: 0.4;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 20px;
 }
