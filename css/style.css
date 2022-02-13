@@ -218,9 +218,12 @@ img {
   margin-bottom: 0.8rem;
 }
 
+.desc-wrap {
+  margin-bottom: 4.1rem;
+}
+
 .desc-film {
   max-width: 52.8rem;
-  margin-bottom: 4.1rem;
 }
 
 .desc-text {
@@ -255,12 +258,13 @@ img {
   align-items: center;
 }
 
-.switch-slider {
+.switch-slider {      /* Кнопка переключатель */
   width: 3.2rem;
   height: 2.2rem;
   flex-shrink: 0;
   margin-left: 2.8rem;
   cursor: pointer;
+  outline: none;
 }
 
 .main-slider-slide {
