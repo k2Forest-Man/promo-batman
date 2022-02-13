@@ -47,6 +47,8 @@
   --basic-white: #ffffff;
   --background-footer: #030102;
   --button-buy-tickets: #151515;
+  --background-button-play: rgba(21, 21, 21, 0.5);
+  --background-button-play-dark: #151515;
 }
 
 /* Index */
@@ -165,7 +167,8 @@ img {
 
 .main {
   padding-top: 18.7rem;
-  background: url(../img/background-img.jpg) no-repeat;
+  background: url(../img/background-img.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
   background-position-y: top;
@@ -219,6 +222,8 @@ img {
 }
 
 .desc-wrap {
+  display: flex;
+  align-items: center;
   margin-bottom: 4.1rem;
 }
 
@@ -233,6 +238,37 @@ img {
   font-size: 1.4rem;
   line-height: 150%;
 }
+
+/* Button play */
+
+.button-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13.2rem;
+  height: 13.2rem;
+  border-radius: 50%;
+  background-color: var(--background-button-play);
+  cursor: pointer;
+  margin-left: 33rem;
+}
+
+.button-play-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: var(--background-button-play-dark);
+}
+
+.button-play-dark img {
+  width: 3.5rem;
+  height: 4rem;
+}
+
+/* Кнопка - купить билеты */
 
 .button-buy-tickets {
   display: flex;
