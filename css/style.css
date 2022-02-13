@@ -69,10 +69,10 @@
   font-weight: 400;
   line-height: 114%;
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: 1fr min-content min-content; /* было min-content 1fr min-content; поменялось направление потока  */
   align-content: start;
   color: var(--basic-white);
-  position: relative; /* Чтобы шапка не уезжала */
+  position: relative;  /*Чтобы шапка не уезжала*/
 }
 
 a {
@@ -116,6 +116,7 @@ img {
   width: 7.9rem;
   height: 2.8rem;
   margin-right: 3.9rem;
+  overflow: hidden; 
 }
 
 .site-nav,
@@ -245,12 +246,54 @@ img {
   margin-bottom: 8.8rem;
 }
 
+/* Slider */
+
+.section-main-slider {
+  max-width: 41.6rem;
+  margin-bottom: 10.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.switch-slider {
+  width: 3.2rem;
+  height: 2.2rem;
+  flex-shrink: 0;
+  margin-left: 2.8rem;
+  cursor: pointer;
+}
+
+.main-slider-slide {
+  position: relative;
+  width: 16.4rem;
+  height: 10.5rem;
+  border-radius: 0.8rem;
+  overflow: hidden; /* помогает обрезать все лишнее, которое не соответсвует размерам нашего блока */
+}
+
+
+
+.main-slider-slide span {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 0.6rem;
+  transform: translate(0, 0);
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 120%;
+}
+
+.main-slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Footer */
 
 .main-footer {
   background-color: var(--background-footer);
   padding: 2rem 0;
-  flex: 0 0 auto;
 }
 
 .main-footer .container {

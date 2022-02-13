@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="manifest" href="manifest.webmanifest">
 	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.css">
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<title>Промосайт фильма «Бэтмен» 2022</title>
 </head>
@@ -41,6 +42,7 @@
 	<main class="main">
 		<div class="container">
 			<section class="about-film">
+
 				<div class="title-rating">
 					<div class="title-film">2022, боевик, триллер</div>
 					<div class="rating-wrap">
@@ -58,17 +60,59 @@
 						</div>
 						<div class="estimation">7/10</div>
 					</div>
-					<h1 class="header-film">Бэтмен</h1>
-					<div class="desc-film">
-						<p class="desc-text">
-							После двух лет поисков правосудия на улицах Готэма для своих сограждан<br>
-							Бэтмен становится олицетворением беспощадного возмездия. Когда в городе<br>
-							происходит серия жестоких нападений на представителей элиты, загадочные<br>
-							улики приводят Брюса Уэйна в самые темные закоулки преступного мира.<br>
-							Теперь под прицелом оказывается сам Бэтмен.
-						</p>
+				</div>
+
+				<h1 class="header-film">Бэтмен</h1>
+
+				<div class="desc-film">
+					<p class="desc-text">
+						После двух лет поисков правосудия на улицах Готэма для своих сограждан<br>
+						Бэтмен становится олицетворением беспощадного возмездия. Когда в городе<br>
+						происходит серия жестоких нападений на представителей элиты, загадочные<br>
+						улики приводят Брюса Уэйна в самые темные закоулки преступного мира.<br>
+						Теперь под прицелом оказывается сам Бэтмен.
+					</p>
+				</div>
+
+				<a href="#" class="button-buy-tickets">Купить билеты</a>
+			</section>
+
+			<section class="section-main-slider">				
+				<div class="main-slider swiper">
+					<div class="swiper-wrapper">
+						<div class="main-slider-slide swiper-slide">
+							<img src="img/slide-1.jpg" alt="Первый трейлер" width="164" height="105">
+							<span>Трейлер #1</span>
+						</div>
+
+						<div class="main-slider-slide swiper-slide">
+							<img src="img/slide-2.jpg" alt="Второй трейлер" width="164" height="105">
+							<span>Трейлер #2</span>
+						</div>
+
+						<div class="main-slider-slide swiper-slide">
+							<img src="img/slide-1.jpg" alt="Третий трейлер" width="164" height="105">
+							<span>Трейлер #3</span>
+						</div>
+
+						<div class="main-slider-slide swiper-slide">
+							<img src="img/slide-2.jpg" alt="Четвертый трейлер" width="164" height="105">
+							<span>Трейлер #4</span>
+						</div>
+
+						<div class="main-slider-slide swiper-slide">
+							<img src="img/slide-1.jpg" alt="Пятый трейлер" width="164" height="105">
+							<span>Трейлер #5</span>
+						</div>
+
+						<div class="main-slider-slide swiper-slide">
+							<img src="img/slide-2.jpg" alt="Шестой трейлер" width="164" height="105">
+							<span>Трейлер #6</span>
+						</div>
 					</div>
-					<a href="#" class="button-buy-tickets">Купить билеты</a>
+				</div>
+				<div class="switch-slider">
+					<img src="img/switch-slider.svg" alt="Переключатель слайдера">
 				</div>
 			</section>
 		</div>
@@ -86,6 +130,7 @@
 			</ul>
 		</div>		
 	</footer>
-
+	<script src="js/swiper-bundle.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
