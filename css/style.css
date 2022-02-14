@@ -336,6 +336,7 @@ h6 {
 }
 
 .desc-film {
+  display: flex;
   max-width: 52.8rem;
 }
 
@@ -512,7 +513,7 @@ h6 {
   }
 
   .page-body {
-    min-width: 47.6rem;
+    min-width: 31.5rem;
     min-height: 100%;
     grid-template-rows: 1fr min-content min-content; /* было min-content 1fr min-content; поменялось направление потока */
     align-content: start;
@@ -570,6 +571,10 @@ h6 {
     flex-direction: column;
   }
 
+  .site-nav-mobile {
+    align-items: center;
+  }
+
   .site-nav-mobile li:not(:last-child) {
     margin-bottom: 1.7rem;
   }
@@ -617,6 +622,14 @@ h6 {
 
   .button-buy-tickets {
     margin-bottom: 4.4rem;
+  }
+
+  .about-film {
+    max-width: 31.5rem;
+  }
+
+  .container .section-main-slider {
+    max-width: 31.5rem;
   }
 
   .button-play {
