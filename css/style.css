@@ -150,7 +150,6 @@ h6 {
   html {
       font-size: 10px;
   }
-
 }
 
 @media (max-width: 44em) {
@@ -191,17 +190,17 @@ h6 {
 
 /* Header */
 
-.container {
-  width: 113.5rem; /*rem = 10px*/
-  margin: 0 auto;
-}
-
 .main-header {
   position: absolute;
   padding-bottom: 9.5rem;
   left: 50%;
   top: 6.4rem;
   transform: translate(-50%, 0);
+  margin: 0 auto;
+}
+
+.container {
+  width: 113.5rem; /*rem = 10px*/
   margin: 0 auto;
 }
 
@@ -228,6 +227,12 @@ h6 {
 .list-social {
   list-style: none;
   padding: 0;
+}
+
+.site-nav-mobile,
+.button-close,
+.menu-burger {
+  display: none;
 }
 
 .site-nav {
@@ -398,8 +403,8 @@ h6 {
 }
 
 .switch-slider {      /* Кнопка переключатель */
-  width: 3.2rem;
-  height: 2.2rem;
+  width: 3.5rem;
+  height: 4rem;
   flex-shrink: 0;
   margin-left: 2.8rem;
   cursor: pointer;
@@ -473,4 +478,172 @@ h6 {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 3rem 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-inner {
+  width: 100rem;
+  height: 60rem;
+}
+
+.active {
+  display: flex;
+}
+
+@media (max-width: 48em) {
+  html {
+      font-size: 10px;
+  }
+
+  .page-body {
+    min-width: 47.6rem;
+    min-height: 100%;
+    grid-template-rows: 1fr min-content min-content; /* было min-content 1fr min-content; поменялось направление потока */
+    align-content: start;
+  }
+
+  .main {
+    background-position-x: 66%;
+  }
+
+  .main-header {
+    width: 69.4%;
+    background-color: var(--background-button-play-dark);
+    top: 0%;
+    transform: translate(-28%,0);
+    padding: 4rem 0;
+    display: none;
+    z-index: 10;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .main-header .container,
+  .main-nav .wrapper-nav,
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .list-social {
+    margin-bottom: 2.2rem;
+  }
+
+  .site-nav li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-nav-mobile {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .site-nav-mobile li:not(:last-child) {
+    margin-bottom: 1.7rem;
+  }
+
+  .site-nav-mobile a {
+    color: var(--basic-white);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 114%;
+  }
+
+  .button-close {
+    display: block;
+  }
+
+  .menu-button-close {
+    width: 2.3rem;
+    height: 2.3rem;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+  }
+
+  .menu-burger {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 1%;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .desc-wrap {
+    flex-direction: column;
+  }
+
+  .desc-wrap .desc-film {
+    margin-bottom: 5rem;
+  }
+
+  .desc-text {
+    white-space: normal;
+  }
+
+
+  .button-buy-tickets {
+    margin-bottom: 4.4rem;
+  }
+
+  .button-play {
+    margin-left: 0;
+  }
+
+  .switch-slider {
+    display: none;
+  }
+
+  .main-slider {
+    margin-left: 0;
+    max-width: 40%;
+  }
+
+  .main-footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal {
+    padding: 3rem 0;
+  }
+  
+  .modal-inner {
+    width: 100%;
+    height: 40rem;
+  }
+
 }
