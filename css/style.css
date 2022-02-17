@@ -247,6 +247,11 @@ h6 {
   margin-right: 2.4rem;
 }
 
+.site-nav li:hover {
+  transform: scale(1.5);
+  transition: all 0.4s linear;
+}
+
 .site-nav a {
   color: var(--basic-white);
   font-size: 1.4rem;
@@ -394,6 +399,11 @@ h6 {
   margin-bottom: 8.8rem;
 }
 
+.button-buy-tickets:hover {
+  transform: scale(1.2);
+  transition: all 0.4s linear;
+}
+
 /* Slider */
 
 .section-main-slider {
@@ -506,6 +516,8 @@ h6 {
 .active {
   display: flex;
 }
+
+/* Мобильная версия iPhone 8 */
 
 @media (max-width: 48em) {
   html {
