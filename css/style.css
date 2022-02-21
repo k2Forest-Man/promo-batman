@@ -310,8 +310,10 @@ h6 {
 }
 
 .rating-star {
+  display: flex;
+  align-items: center;
   width: 1.2rem;
-  height: 1.15rem;
+  height: 1.4rem;
   flex-shrink: 0; /* Ставим, чтобы при уменьшении экрана, img не сжалось */
 }
 
@@ -421,6 +423,8 @@ h6 {
   margin-left: 2.8rem;
   cursor: pointer;
   outline: none;
+  display: flex;
+  align-items: center ;
 }
 
 .main-slider-slide {
